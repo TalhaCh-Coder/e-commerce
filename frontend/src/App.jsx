@@ -5,13 +5,19 @@ import ProductsPage from "./pages/ProductsPage";
 
 const router = createBrowserRouter([
   {
+    path: "/",
     element: <MainLayout />,
     children: [
-      { path: "/", element: <HomePage /> },
       { path: "/products", element: <ProductsPage /> },
+      { index: true, element: <HomePage /> },
       // {path:'/cart',element:<CartPage/>}
     ],
   },
+  // {
+  //   path: "/dashboard",
+  //   element: <DashboardLayout />,
+  //   children: [{ index: true, element: <DashboardHomePage /> }],
+  // },
 ]);
 
 function App() {
