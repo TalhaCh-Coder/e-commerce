@@ -1,11 +1,21 @@
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import MainLayout from "./layouts/MainLayout";
+import HomePage from "./pages/HomePage";
+import ProductsPage from "./pages/ProductsPage";
 
+const router = createBrowserRouter([
+  {
+    element: <MainLayout />,
+    children: [
+      { path: "/", element: <HomePage /> },
+      { path: "/products", element: <ProductsPage /> },
+      // {path:'/cart',element:<CartPage/>}
+    ],
+  },
+]);
 
 function App() {
-  return (
-    <>
-      <button onClick={handleClick}>Click to Talk to server</button>
-    </>
-  )
+  return <RouterProvider router={router} />;
 }
 
-export default App
+export default App;
