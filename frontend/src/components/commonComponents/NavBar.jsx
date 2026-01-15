@@ -18,7 +18,7 @@ function NavBar() {
 
   return (
     <>
-      <nav>
+      <nav className="fixed w-full bg-white z-1000">
         <div className="flex items-center justify-between p-4 bg-blue-700 text-white">
           <div>
             <h1>
